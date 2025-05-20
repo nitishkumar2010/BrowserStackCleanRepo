@@ -275,7 +275,6 @@
 				<configuration>
 					<source>20</source>   <!-- or 11, based on your JDK -->
 					<target>20</target>
-					<release>20</release> <!-- Optional but recommended -->
 				</configuration>
 			</plugin>
 		</plugins>
