@@ -1,44 +1,26 @@
 package BRP;
 
-import java.util.HashMap;
+import java.io.UnsupportedEncodingException;
 
 import org.testng.annotations.Test;
 
 import EXSquared.Brookfield.AboutPage;
 import EXSquared.Brookfield.BRPHelper;
-import EXSquared.Brookfield.AboutPage.AboutPageTabs;
 import EXSquared.Brookfield.BRPHelper.ExpectedPage;
+import EXSquared.Brookfield.HomePage;
 import Utils.Config;
 import Utils.TestBase;
-import Utils.TestDataReader;
 
 public class TestAboutPage extends TestBase {
 
-	@Test(timeOut = DEFAULT_TEST_TIMEOUT, description = "Verify content present over Leadership page", dataProvider = "GetTestConfig")
-	public void verifyLeadershipSectionAboutPage(Config testConfig) {
+	@Test(timeOut = DEFAULT_TEST_TIMEOUT, description = "Verify Locations where Brookfield Builds", dataProvider = "GetTestConfig")
+	public void verifyLocationsWhereBrookfieldBuilds(Config testConfig) throws UnsupportedEncodingException {
 
-		String sectionTitle = "Senior Leadership & Market Presidents";
-		String sectionDescription = "When it comes to building great communities, "
-				+ "experience is a key differentiator. That's why our team has "
-				+ "some of the best, most seasoned people in the industry. Our "
-				+ "management teams have an average of 20 years experience and "
-				+ "are committed to building the best communities in their regions.";
-		String sheetName = "AboutLeadershipStage";
-
-		TestDataReader reader = testConfig.getCachedTestDataReaderObject(sheetName);
-		HashMap<String, String> expectedData = new HashMap<>();
-		for (int i = 1; i < reader.getRecordsNum(); i++) {
-			String name = reader.GetData(i, "Name");
-			String designation = reader.GetData(i, "Designation");
-			expectedData.put(name, designation);
-		}
-
+		String expectedLocs[] = { "Alberta", "Ontario", "Arizona", "California", "Colorado", "Delaware", "Maryland", "North Carolina", "South Carolina", "Texas", "Virginia"};
 		BRPHelper brpHelper = new BRPHelper(testConfig);
-		brpHelper.aboutPage = (AboutPage) brpHelper.navigateToRequiredPage(ExpectedPage.AboutPage);
-		brpHelper.aboutPage.navigateToRequiredTabContent(AboutPageTabs.Leadership);
-		brpHelper.aboutPage.validateInvalidImages(testConfig);
-		brpHelper.aboutPage.verifyLeadershipHistoryPageTopSection(sectionTitle, sectionDescription);
-		brpHelper.aboutPage.verifyLeadershipContent(expectedData, reader);
+		brpHelper.homePage = (HomePage) brpHelper.navigateToRequiredPage(ExpectedPage.HomePage);
+		brpHelper.homePage.verifyLocationsWhereBrookfieldBuilds(expectedLocs);
+
 	}
 
 	@Test(timeOut = DEFAULT_TEST_TIMEOUT, description = "Verify different tabs and hero image present over about page", dataProvider = "GetTestConfig")

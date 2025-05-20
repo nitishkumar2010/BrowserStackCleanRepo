@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Cross-Platform">
-    <test name="About Page">
-        <classes>
-            <class name="BRP.TestAboutPage" />
-        </classes>
-    </test>
-<!--    <test name="Blog Article Page">
-        <classes>
-            <class name="BRP.TestBlogArticlePage" />
-        </classes>
-    </test>-->
+<suite name="Parallel Automation Run" thread-count="1" parallel="tests">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="About Page">
+		<classes>
+			<class name="BRP.TestAboutPage" />
+		</classes>
+	</test>
 </suite>

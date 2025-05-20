@@ -47,6 +47,8 @@ public class SendReportEx2 {
 	};
 
 	public static void main(String[] args) {
+		
+		String folder = ".jenkins";
 
 		String htmlContent = "", htmlTableContent = "";
 
@@ -61,7 +63,7 @@ public class SendReportEx2 {
 		htmlContent += "Report Generated from machine <b>" + IP.getHostName() + "/" + IP.getHostAddress() + "</b>";
 
 		String str = null;
-		File file = new File(System.getProperty("user.home") + File.separator + ".hudson" + File.separator + "jobs"
+		File file = new File(System.getProperty("user.home") + File.separator + folder + File.separator + "jobs"
 				+ File.separator + "BRPExecution" + File.separator + "nextBuildNumber");
 		FileInputStream fis;
 		try {
