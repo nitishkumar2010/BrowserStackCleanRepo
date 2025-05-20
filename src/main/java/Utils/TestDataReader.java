@@ -426,202 +426,156 @@ public class TestDataReader
 			return value;
 	}
 	
-	private void readFile(Config testConfig, String sheetName, String path)
-	{
+	private void readFile(Config testConfig, String sheetName, String path) {
 		this.testConfig = testConfig;
 		int index = path.lastIndexOf("//");
 		if (index != -1)
-			testConfig.logComment("Read:-'" + path.substring(path.lastIndexOf("//")) + "', Sheet:- '" + sheetName + "'");
+			testConfig
+					.logComment("Read:-'" + path.substring(path.lastIndexOf("//")) + "', Sheet:- '" + sheetName + "'");
 		else
 			testConfig.logComment("Read:-'" + path + "', Sheet:- '" + sheetName + "'");
-		
+
 		filename = path;
 		testData = new ArrayList<List<String>>();
-		
-		try
-		{
-			if (filename.endsWith(".xls"))
-			{
-				try
-				{
+
+		try {
+			if (filename.endsWith(".xls")) {
+				try {
 					HSSFWorkbook workbook = null;
 					HSSFSheet sheet = null;
-					
+
 					fis = new FileInputStream(filename);
-					
-					try
-					{
+
+					try {
 						workbook = new HSSFWorkbook(fis);
-					}
-					catch(OutOfMemoryError e)
-					{
-						//Catching "java.lang.OutOfMemoryError: GC overhead limit exceeded" Exception
-						 
-						//Print the jvm heap size
+					} catch (OutOfMemoryError e) {
+						// Catching "java.lang.OutOfMemoryError: GC overhead limit exceeded" Exception
+
+						// Print the jvm heap size
 						long heapSize = Runtime.getRuntime().totalMemory();
-						testConfig.logFail("******************** Heap Size of machine is = " + heapSize + " ********************");
-						
+						testConfig.logFail(
+								"******************** Heap Size of machine is = " + heapSize + " ********************");
+
 						testConfig.logException(e);
 						e.printStackTrace();
 					}
-					
+
 					sheetName = sheetName.trim();
 					sheet = workbook.getSheet(sheetName);
 					FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
-					
+
 					if (sheet == null)
 						testConfig.logFail("No sheetName:- " + sheetName + " found.");
-					
-					
+
 					Iterator<Row> rows = sheet.rowIterator();
-					while (rows.hasNext())
-					{
+					while (rows.hasNext()) {
 						HSSFRow row = (HSSFRow) rows.next();
 						List<String> data = new ArrayList<String>();
-						for (int z = 0; z < row.getLastCellNum(); z++)
-						{
+						for (int z = 0; z < row.getLastCellNum(); z++) {
 							String str = convertHSSFCellToString(row.getCell(z), evaluator);
 							data.add(str);
 						}
 						testData.add(data);
 					}
-				}
-				catch (IOException e) // Invalid header signature; read
+				} catch (IOException e) // Invalid header signature; read
 										// 0x6576206C6D783F3C, expected
 										// 0xE11AB1A1E011CFD0
 				// because the exported xls file is actually a Open XML file
 				{
-					try
-					{
+					try {
 						File fXmlFile = new File(filename);
 						DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 						DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 						Document doc = dBuilder.parse(fXmlFile);
-						
+
 						doc.getDocumentElement().normalize();
-						
+
 						NodeList rows = doc.getElementsByTagName("Row");
-						
-						for (int temp = 0; temp < rows.getLength(); temp++)
-						{
+
+						for (int temp = 0; temp < rows.getLength(); temp++) {
 							Node row = rows.item(temp);
 							List<String> data = new ArrayList<String>();
 							NodeList cols = row.getChildNodes();
-							for (int z = 0; z < cols.getLength(); z++)
-							{
+							for (int z = 0; z < cols.getLength(); z++) {
 								Node col = cols.item(z);
 								String str = col.getTextContent();
 								data.add(str);
 							}
 							testData.add(data);
 						}
-					}
-					catch (Exception e1)
-					{
+					} catch (Exception e1) {
 						testConfig.logException(e1);
 					}
 				}
 				this.sheetName = sheetName;
+			} else if (filename.endsWith(".xlsx")) {
+				XSSFWorkbook workbook = null;
+				XSSFSheet sheet = null;
+
+				fis = new FileInputStream(filename);
+
+				workbook = new XSSFWorkbook(fis);
+				sheet = workbook.getSheet(sheetName);
+				Iterator<Row> rows = sheet.rowIterator();
+				while (rows.hasNext()) {
+					XSSFRow row = (XSSFRow) rows.next();
+					List<String> data = new ArrayList<String>();
+					for (int z = 0; z < row.getLastCellNum(); z++) {
+						String str = convertXSSFCellToString(row.getCell(z));
+						data.add(str);
+					}
+					testData.add(data);
+				}
+				this.sheetName = sheetName;
+			} else if (filename.endsWith(".csv")) {
+
+				BufferedReader CSVFile = null;
+				String dataRow = null;
+				ArrayList<String> datatemp = new ArrayList<String>();
+				try {
+					CSVFile = new BufferedReader(new FileReader(path));
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+
+				try {
+					dataRow = CSVFile.readLine();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				while (dataRow != null) {
+
+					String[] dataArray = dataRow.split(",");
+
+					List<String> data = new ArrayList<String>();
+					for (int z = 0; z < dataArray.length; z++) {
+						String str = dataArray[z];
+						data.add(str);
+					}
+					testData.add(data);
+
+					try {
+						dataRow = CSVFile.readLine();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				try {
+					CSVFile.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
-			else
-				if (filename.endsWith(".xlsx"))
-				{
-					XSSFWorkbook workbook = null;
-					XSSFSheet sheet = null;
-					
-					fis = new FileInputStream(filename);
-					
-					workbook = new XSSFWorkbook(fis);
-					sheet = workbook.getSheet(sheetName);
-					Iterator<Row> rows = sheet.rowIterator();
-					while (rows.hasNext())
-					{
-						XSSFRow row = (XSSFRow) rows.next();
-						List<String> data = new ArrayList<String>();
-						for (int z = 0; z < row.getLastCellNum(); z++)
-						{
-							String str = convertXSSFCellToString(row.getCell(z));
-							data.add(str);
-						}
-						testData.add(data);
-					}
-					this.sheetName = sheetName;
-				}
-				else
-					if (filename.endsWith(".csv"))
-					{
-						
-						BufferedReader CSVFile = null;
-						String dataRow = null;
-						ArrayList<String> datatemp = new ArrayList<String>();
-						try
-						{
-							CSVFile = new BufferedReader(new FileReader(path));
-						}
-						catch (FileNotFoundException e)
-						{
-							e.printStackTrace();
-						}
-						
-						try
-						{
-							dataRow = CSVFile.readLine();
-						}
-						catch (IOException e)
-						{
-							e.printStackTrace();
-						}
-						
-						while (dataRow != null)
-						{
-							
-							String[] dataArray = dataRow.split(",");
-							
-							List<String> data = new ArrayList<String>();
-							for (int z = 0; z < dataArray.length; z++)
-							{
-								String str = dataArray[z];
-								data.add(str);
-							}
-							testData.add(data);
-							
-							try
-							{
-								dataRow = CSVFile.readLine();
-							}
-							catch (IOException e)
-							{
-								e.printStackTrace();
-							}
-						}
-						try
-						{
-							CSVFile.close();
-						}
-						catch (IOException e)
-						{
-							e.printStackTrace();
-						}
-					}
-		}
-		catch (FileNotFoundException e)
-		{
+		} catch (FileNotFoundException e) {
 			testConfig.logException(e);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			testConfig.logException(e);
-		}
-		finally
-		{
-			if (fis != null)
-			{
-				try
-				{
+		} finally {
+			if (fis != null) {
+				try {
 					fis.close();
-				}
-				catch (IOException e)
-				{
+				} catch (IOException e) {
 					testConfig.logException(e);
 				}
 			}
