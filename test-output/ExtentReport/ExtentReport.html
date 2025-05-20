@@ -1,0 +1,1923 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ExtentReports 4.x Report</title>
+        <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+	    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@6fbbd1c32fbc2463d026da5c6ce2e9eef0d29512/spark/css/spark-style.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head>    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa -report dark">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="vheader">
+        <div class="nav-logo">
+          <a href="#">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">EX Squared Automation Report</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">2025-05-20 11:36:10</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>            <div class="vcontainer">
+                <div class="main-content">
+<div class="test-wrapper row test-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tests</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+						
+						
+						
+						
+						<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item"  status="fail" test-id="1"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyLeadershipSectionAboutPage</p>
+							<p class="duration text-sm">0h 2m 59s+613ms</p>
+							<span class="datetime">11:36:10 am</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-fail">verifyLeadershipSectionAboutPage</h5>
+									<span class='badge badge-success'>05.20.2025 11:36:10</span>
+									<span class='badge badge-danger'>05.20.2025 11:39:10</span>
+									<span class='badge badge-default'>0h 2m 59s+613ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:10 am</td>
+				<td>
+						Read the environment file:- D:\testng-browserstack-master\Parameters\BRPAzureStage.properties
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:10 am</td>
+				<td>
+						Results Directory is:- D:\testng-browserstack-master//test-output
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:11 am</td>
+				<td>
+						Read:-'//TestData.xls', Sheet:- 'AboutLeadershipStage'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:13 am</td>
+				<td>
+						Launching 'chrome' browser in local machine
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:27 am</td>
+				<td>
+						Wait for '2' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:27 am</td>
+				<td>
+						Launching 'chrome' browser in local machine
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:33 am</td>
+				<td>
+						Navigate to web page- 'https://brp:@Brookfield1@azure-stage.brookfieldresidential.com/' at:- 11:36:33
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:38 am</td>
+				<td>
+						Get the WebElement with css:button#onetrust-accept-btn-handler
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:50 am</td>
+				<td>
+						Click on 'One trust accept cookies button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:50 am</td>
+				<td>
+						Started waiting for 'HomePage' to load at:- 2025-05-20_11-36-50. Wait upto 45 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:51 am</td>
+				<td>
+						HomePage with Loader loaded in :- 0.673 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:53 am</td>
+				<td>
+						Wait for '2' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:53 am</td>
+				<td>
+						Clicked on Header top nav menu bar
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:55 am</td>
+				<td>
+						Wait for '2' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:36:55 am</td>
+				<td>
+						Get the WebElement with xPath:.//a[@aria-label='About']
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:05 am</td>
+				<td>
+						Clicked on About link from Header
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:05 am</td>
+				<td>
+						Started waiting for 'AboutPage' to load at:- 2025-05-20_11-37-05. Wait upto 45 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:05 am</td>
+				<td>
+						AboutPage with Loader loaded in :- 0.262 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:10 am</td>
+				<td>
+						Wait for '5' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:10 am</td>
+				<td>
+						Get the WebElement with xPath:.//a[text()='Leadership']
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:11 am</td>
+				<td>
+						Click on 'Leadership tab'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:16 am</td>
+				<td>
+						Wait for '5' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:16 am</td>
+				<td>
+						Get the List of WebElements with tagName:img
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:18 am</td>
+				<td>
+						Removing https://bat.bing.com/action/0?ti=4057469&tm=gtm002&Ver=2&mid=53c25883-9115-4a3e-8c9d-70c1a77c3a38&bo=1&sid=a50dfd00354011f0b4f0f97b21e8627e&vid=a50e2dc0354011f0917ed371e488b1e3&vids=1&msclkid=N&uach=pv%3D6.0.0&pi=918639831&lg=en-US&sw=1920&sh=1080&sc=24&nwd=1&tl=Brookfield%20Residential%20%7C%20New%20Home%20Builder%20%7C%20About%20Us&kw=New%20Home%20Builder&p=https%3A%2F%2Fazure-stage.brookfieldresidential.com%2Fabout&r=https%3A%2F%2Fazure-stage.brookfieldresidential.com%2F&lt=4476&evt=pageLoad&sv=1&cdb=AQET&rn=687544
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:18 am</td>
+				<td>
+						Total no. of images are 26
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:18 am</td>
+				<td>
+						Total no. of unique images are 26
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:18 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/home-logo/logo/brookfieldlogo.svg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:21 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/home-logo/logo/brookfieldlogo.svg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:21 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/about-hero/corporate/about-landing-header-kissing-tree-san-marcos-tx.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:24 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/about-hero/corporate/about-landing-header-kissing-tree-san-marcos-tx.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:24 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/alan-norris.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:25 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/alan-norris.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:25 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/adrian-foley.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:26 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/adrian-foley.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:26 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/corporate/2023_brookfield_dea-mcdonald_portrait-reduced.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:28 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/corporate/2023_brookfield_dea-mcdonald_portrait-reduced.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:28 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/corporate/gregg-hughes-president-dc.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:29 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/corporate/gregg-hughes-president-dc.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:29 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/thomas-lui.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:30 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/thomas-lui.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:30 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/warren-krug.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:31 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/warren-krug.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:31 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/shane-pearson.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:31 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/shane-pearson.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:31 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/ted-mckibbin.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:33 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/ted-mckibbin.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:33 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/trent-edwards_brookfield-residential_headshot_jan-2022_849x556.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:34 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/trent-edwards_brookfield-residential_headshot_jan-2022_849x556.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:34 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/don-merlo.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:35 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/shane/don-merlo.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:35 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/matt-elsesser.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:36 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/matt-elsesser.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:36 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/bill-meyer-849x556.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:37 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/bill-meyer-849x556.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:37 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/brad-chelton_brookfield-residential_headshot-jan-2022_849x556-compressed.png
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:39 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/brad-chelton_brookfield-residential_headshot-jan-2022_849x556-compressed.png : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:39 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/josh-roden_brookfield-residential_jan-15-2022.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:40 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/josh-roden_brookfield-residential_jan-15-2022.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:40 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/nicole-burdette_brookfield-residential_jan-15-2022.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:41 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/nicole-burdette_brookfield-residential_jan-15-2022.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:41 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/peter-lauener---849-x-556.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:42 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/peter-lauener---849-x-556.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:42 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/vf-scott-janis_brookfield-residential_headshot_jan-2022_849x556.jpg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:43 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/modules/column-gallery/vf-scott-janis_brookfield-residential_headshot_jan-2022_849x556.jpg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:43 am</td>
+				<td>
+						URL : https://azure-stage.brookfieldresidential.com/-/media/brp/global/icons/privacyoptions.svg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Status code for https://azure-stage.brookfieldresidential.com/-/media/brp/global/icons/privacyoptions.svg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						URL : https://cdn.cookielaw.org/logos/static/ot_company_logo.png
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Status code for https://cdn.cookielaw.org/logos/static/ot_company_logo.png : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						URL : https://cdn.cookielaw.org/logos/static/powered_by_logo.svg
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Status code for https://cdn.cookielaw.org/logos/static/powered_by_logo.svg : 200
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Total no. of invalid images are 0
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Get the WebElement with xPath:.//h1
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:44 am</td>
+				<td>
+						Get the WebElement with xPath:.//h1/parent::div/div
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:45 am</td>
+				<td>
+						Verified 'Title for top section over Leadership page' as :-'Senior Leadership & Market Presidents'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:37:45 am</td>
+				<td>
+						Verified 'Description for top section over Leadership page' as :-'When it comes to building great communities, experience is a key differentiator. That's why our team has some of the best, most seasoned people in the industry. Our management teams have an average of 20 years experience and are committed to building the best communities in their regions.'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:45 am</td>
+				<td>
+						Get the List of WebElements with css:div.relative.flex>div.group
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:57 am</td>
+				<td>
+						<B>Page URL</B>:- https://azure-stage.brookfieldresidential.com/about/leadership
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:57 am</td>
+				<td>
+						<B>Screenshot</B>:- <a href=D:\testng-browserstack-master\test-output\html\2025-05-20_11-37-45_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png target='_blank' >2025-05-20_11-37-45_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png</a>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:37:57 am</td>
+				<td>
+						Expected 'All leader tiles count' was :-'18'. But actual is '17'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:58 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:37:58 am</td>
+				<td>
+						Get the WebElement with xPath:(.//div[contains(@class,'relative flex')]/div[contains(@class,'group')])[1]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:00 am</td>
+				<td>
+						Wait for '2' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:00 am</td>
+				<td>
+						Get the WebElement with xPath:(.//button[contains(text(),'Read More')])[1]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:00 am</td>
+				<td>
+						Click on 'Read More button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:04 am</td>
+				<td>
+						Wait for '4' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:04 am</td>
+				<td>
+						Get the WebElement with xPath:.//button[contains(@class,'xl:right-10')]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:04 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:06 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:06 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:07 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:07 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:09 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:09 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:10 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:10 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:11 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:11 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:13 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:13 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:14 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:14 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:15 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:15 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:17 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:17 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:18 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:18 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:19 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:19 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:20 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:20 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:21 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:21 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:23 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:23 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:24 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:24 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:25 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:25 am</td>
+				<td>
+						Click on 'Next button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:26 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:31 am</td>
+				<td>
+						Get the List of WebElements with xPath:.//h2[contains(@class,'md:text-3xl')]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:32 am</td>
+				<td>
+						Get the List of WebElements with xPath:.//div[contains(@class,'text-xs md:text-base')]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:34 am</td>
+				<td>
+						Get the WebElement with xPath:.//button[contains(@class,'lg:left-5')]
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:34 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:35 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:35 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:37 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:37 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:38 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:38 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:39 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:39 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:40 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:40 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:42 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:42 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:43 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:43 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:44 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:44 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:45 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:45 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:47 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:47 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:48 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:48 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:49 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:49 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:51 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:51 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:52 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:52 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:53 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:53 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:54 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:54 am</td>
+				<td>
+						Click on 'Prev button'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Wait for '1' seconds
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Name over first card' as :-'Alan Norris'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Designation over first card' as :-'Executive Chairman'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Adrian Foley' as :-'President & Chief Executive Officer'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Josh Roden' as :-'President, Northern California'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Nicole Burdette' as :-'President, Southern California'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Peter Lauener' as :-'President, Colorado'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Dea McDonald' as :-'President, Arizona'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:38:56 am</td>
+				<td>
+						Verified 'Don Merlo' as :-'Chief Strategic Officer'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						<B>Page URL</B>:- https://azure-stage.brookfieldresidential.com/about/leadership
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						<B>Screenshot</B>:- <a href=D:\testng-browserstack-master\test-output\html\2025-05-20_11-38-56_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png target='_blank' >2025-05-20_11-38-56_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png</a>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Expected 'Margaret Wu' was :-'Executive Vice President, Corporate Operations'. But actual is 'null'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Brad Chelton' as :-'President, Texas'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Scott Janis' as :-'President, Alberta'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Ted McKibbin' as :-'President, U.S. Land & Housing'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Matt Elsesser' as :-'President and Chief Development Officer, Commercial'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Shane Pearson' as :-'Chief Operating Officer'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Warren Krug' as :-'Executive Vice President, Chief Investment Officer'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Alan Norris' as :-'Executive Chairman'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Trent Edwards' as :-'President, Canada Land & Housing'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Bill Meyer' as :-'President, Dallas & Southeast'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Thomas Lui' as :-'Executive Vice President, Chief Financial Officer'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						Verified 'Gregg Hughes' as :-'President, DC Metro Area'
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:00 am</td>
+				<td>
+						***************EXECUTION OF TESTCASE ENDS HERE at : 11:39:00 ***************
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						<B>Page URL</B>:- https://azure-stage.brookfieldresidential.com/about/leadership
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						<B>Screenshot</B>:- <a href=D:\testng-browserstack-master\test-output\html\2025-05-20_11-39-00_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png target='_blank' >2025-05-20_11-39-00_BRP.TestAboutPage.verifyLeadershipSectionAboutPage.png</a>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						java.lang.AssertionError: The following asserts failed:
+	Expected 'All leader tiles count' was :-'18'. But actual is '17',
+	Expected 'Margaret Wu' was :-'Executive Vice President, Corporate Operations'. But actual is 'null'
+	at Utils.TestListener.afterInvocation(TestListener.java:95)
+	at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:60)
+	at org.testng.internal.BaseInvoker.runInvokedMethodListeners(BaseInvoker.java:56)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:636)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						Test Case Failed ---> verifyLeadershipSectionAboutPage
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						<font color='Blue'><B>Total time taken by Test 'BRP.TestAboutPage.verifyLeadershipSectionAboutPage' : '2 minutes 55 seconds' </B></font>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:39:05 am</td>
+				<td>
+						<B>Failure occured in test 'BRP.TestAboutPage.verifyLeadershipSectionAboutPage' Ended on '2025-05-20 11:39:05'</B>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:07 am</td>
+				<td>
+						<------ AfterMethod started for : Utils.Config@1af6d7de BRP.TestAboutPage.verifyLeadershipSectionAboutPage ------>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:08 am</td>
+				<td>
+						Close the browser window with URL:- https://azure-stage.brookfieldresidential.com/about/leadership. And title as :- Brookfield Residential | New Home Builder | About Us
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:08 am</td>
+				<td>
+						Quit the browser
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:10 am</td>
+				<td>
+						<------ AfterMethod ended for : Utils.Config@1af6d7de BRP.TestAboutPage.verifyLeadershipSectionAboutPage ------>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="fail" test-id="2"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTabsAndHeroImageOverAboutPage</p>
+							<p class="duration text-sm">0h 5m 16s+187ms</p>
+							<span class="datetime">11:39:10 am</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-fail">verifyTabsAndHeroImageOverAboutPage</h5>
+									<span class='badge badge-success'>05.20.2025 11:39:10</span>
+									<span class='badge badge-danger'>05.20.2025 11:44:26</span>
+									<span class='badge badge-default'>0h 5m 16s+187ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:10 am</td>
+				<td>
+						Read the environment file:- D:\testng-browserstack-master\Parameters\BRPAzureStage.properties
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:10 am</td>
+				<td>
+						Results Directory is:- D:\testng-browserstack-master//test-output
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:11 am</td>
+				<td>
+						Launching 'chrome' browser in local machine
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:39:20 am</td>
+				<td>
+						Navigate to web page- 'https://brp:@Brookfield1@azure-stage.brookfieldresidential.com/' at:- 11:39:20
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:41:26 am</td>
+				<td>
+						Get the WebElement with css:button#onetrust-accept-btn-handler
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:42:12 am</td>
+				<td>
+						Accept cookie section not displayed
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:42:12 am</td>
+				<td>
+						Started waiting for 'HomePage' to load at:- 2025-05-20_11-42-12. Wait upto 45 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:43:15 am</td>
+				<td>
+						'HomePage' still not loaded, so wait upto additional 45 seconds.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:18 am</td>
+				<td>
+						'HomePage' NOT loaded even after :- 126.107 seconds. Exiting...
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:18 am</td>
+				<td>
+						***************EXECUTION OF TESTCASE ENDS HERE at : 11:44:18 ***************
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						<B>Page URL</B>:- https://brp:%40Brookfield1@azure-stage.brookfieldresidential.com/
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						<B>Screenshot</B>:- <a href=D:\testng-browserstack-master\test-output\html\2025-05-20_11-44-18_BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage.png target='_blank' >2025-05-20_11-44-18_BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage.png</a>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						org.openqa.selenium.TimeoutException: 'HomePage' did not load after waiting for 90 seconds
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: driver.version: unknown
+	at Utils.Browser.waitForPageLoad(Browser.java:663)
+	at Utils.Browser.waitForPageLoad(Browser.java:607)
+	at EXSquared.Brookfield.HomePage.<init>(HomePage.java:164)
+	at EXSquared.Brookfield.BRPHelper.navigateToRequiredPage(BRPHelper.java:180)
+	at BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage(TestAboutPage.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:45)
+	at org.testng.internal.InvokeMethodRunnable.call(InvokeMethodRunnable.java:73)
+	at org.testng.internal.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						Test Case Failed ---> verifyTabsAndHeroImageOverAboutPage
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						<font color='Blue'><B>Total time taken by Test 'BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage' : '5 minutes 11 seconds' </B></font>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>11:44:21 am</td>
+				<td>
+						<B>Failure occured in test 'BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage' Ended on '2025-05-20 11:44:21'</B>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:22 am</td>
+				<td>
+						<------ AfterMethod started for : Utils.Config@5c872433 BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage ------>
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:24 am</td>
+				<td>
+						Close the browser window with URL:- https://brp:%40Brookfield1@azure-stage.brookfieldresidential.com/. And title as :- 504 Gateway Time-out
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:25 am</td>
+				<td>
+						Quit the browser
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>11:44:26 am</td>
+				<td>
+						<------ AfterMethod ended for : Utils.Config@5c872433 BRP.TestAboutPage.verifyTabsAndHeroImageOverAboutPage ------>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div>                    <!-- dashboard -->
+<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tests</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='parent-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='0%'>
+						<b>0</b> tests passed
+						</small>
+					</div>
+					<div>
+						<small data-tooltip='100%'><b>2</b> tests failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Log events</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='events-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='20.476%'><b>43</b> events passed</small></div>
+					<div>
+						<small data-tooltip='3.81%'><b>8</b> events failed, 
+						<b data-tooltip='75.714%'>159</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Tests</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">2</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>.00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Start</h6>
+							<h4 class="font-weight-light mt-4">2025-05-20 11:36:10</h4>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Duration</h6>
+							<h4 class="font-weight-light mt-4">0h 8m 16s+803ms</h4>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Timeline</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id="timeline" height="120"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Environment</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Host Name</td>
+								<td>EXIPC0261/172.17.10.72</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>Build/Stage</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Nitish</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var statusGroup = {
+	    parentCount: 2,
+		passParent: 0,
+		failParent: 2,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 2,
+		childCount: 0,
+		passChild: 0,
+		failChild: 0,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 0,
+		grandChildCount: 0,
+		passGrandChild: 0,
+		failGrandChild: 0,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 0,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 0,
+		eventsCount: 210,
+		passEvents: 43,
+		failEvents: 8,
+		fatalEvents: 0,
+		errorEvents: 0,
+		warningEvents: 0,
+		skipEvents: 0,
+		infoEvents: 159,
+		debugEvents: 0,
+		exceptionsEvents: 0
+	};
+</script>
+<script>
+	var timeline = {
+	        "verifyLeadershipSectionAboutPage":179.613,"verifyTabsAndHeroImageOverAboutPage":316.187
+	};
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ac7abbc71b4bb073da00153a5a3fdbcfe0c95e2a/spark/js/spark-script.js"></script>
+<script type="text/javascript">
+
+
+</script></body>
+</html>

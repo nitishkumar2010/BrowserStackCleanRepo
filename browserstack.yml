@@ -1,0 +1,10 @@
+userName: nitish66
+accessKey: j5ZGTwMYzHmqkJPqgMZn
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: latest
+browserstackLocal: false
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
