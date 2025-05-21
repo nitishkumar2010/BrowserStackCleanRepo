@@ -174,7 +174,10 @@ public class HomePage extends BRPHelper {
 
 		List<WebElement> allLocations = Element.getListOfElements(testConfig, How.css,
 				"li.srch-items-center div.srch-flex-grow");
-		Helper.compareEquals(testConfig, "Expected count of the location", expectedLocs.length, allLocations.size());
+		//Helper.compareEquals(testConfig, "Expected count of the location", expectedLocs.length, allLocations.size());
+		
+		// Making this as Failed intentionally
+		Helper.compareEquals(testConfig, "Expected count of the location", expectedLocs.length, allLocations.size() - 1);
 
 		for (int i = 0; i < expectedLocs.length; i++) {
 			Helper.compareEquals(testConfig, "Location " + (i + 1) + " as ", expectedLocs[i],
