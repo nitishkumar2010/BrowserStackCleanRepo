@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel Automation Run" thread-count="2" parallel="methods">
+<suite name="Parallel Automation Run" thread-count="2" parallel="tests">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-	<test name="Search Results Page" >
+	<test name="About Page">
 		<classes>
 			<class name="BRP.TestAboutPage" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test>
+	<test name="Home Page">
+		<classes>
+			<class name="BRP.TestHomePage" />
+		</classes>
+	</test> <!--Test -->
+</suite> <!--Suite -->
