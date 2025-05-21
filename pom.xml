@@ -80,6 +80,14 @@
 			<version>31.0.1-jre</version>
 		</dependency>
 
+		<!-- Google Guice (required by ReportNG) -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+
+
 		<!-- AShot for screenshots -->
 		<dependency>
 			<groupId>ru.yandex.qatools.ashot</groupId>
