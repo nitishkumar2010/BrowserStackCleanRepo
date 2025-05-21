@@ -23,7 +23,7 @@ public class ReadResultFolderAndPrepareMailContent {
 	public static String readFiles(String buildNum) {
 
 		String path = System.getProperty("user.dir") + File.separator + "test-output" + File.separator
-				+ "jenkins-BRPExecution-" + buildNum.trim() + File.separator + "html" + File.separator;
+				+ "jenkins-BrowserStack-" + buildNum.trim() + File.separator + "html" + File.separator;
 		System.out.println(path);
 		StringBuilder contentBuilder = new StringBuilder();
 		try {
