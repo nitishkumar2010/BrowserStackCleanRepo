@@ -30,7 +30,7 @@ public class ReadResultXMLAndExtractResultData {
 	 * @param suiteName2
 	 * @return
 	 */
-	public static String readFileAndPerformInsertion(String buildNum, String htmlFileName, String suiteName2) {
+	public static String readFileAndPerformInsertion(String buildNum, String htmlFileName, String suiteName2, String suiteNameForReport) {
 		String filePath = System.getProperty("user.dir") + File.separator + "test-output" + File.separator
 				+ "jenkins-BrowserStack-" + buildNum.trim() + File.separator + "xml" + File.separator;
 
@@ -97,7 +97,7 @@ public class ReadResultXMLAndExtractResultData {
 									passPer = 0.00;
 								}
 
-								htmlText = "<tr><td> <a href ='" + path + "'>" + suiteName + "</td>"
+								htmlText = "<tr><td> <a href ='" + path + "'>" + suiteNameForReport + "</td>"
 										+ "<td align='center'>" + totalTestCaseCount + " </td>" + "<td align='center'>"
 										+ passedTestCasesCount + " </td>" + "<td align='center'>"
 										+ failureTestCasesCount + " </td>" + "<td align='center'>"

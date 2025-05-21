@@ -61,11 +61,11 @@ public class ReadResultFolderAndPrepareMailContent {
 			Document document = Jsoup.parse(content_suite);
 			Element suite = document.select("h1").first();
 
-			String suites = suite.text();
-			String suiteName = suites.replaceAll("-\\d+$", "");
+			String suiteName = suite.text();
 			System.out.println(suiteName);
+			String suiteNameForReport = suiteName.replaceAll("-\\d+$", "");
 			htmlContent += ReadResultXMLAndExtractResultData.readFileAndPerformInsertion(buildNum,
-					p.get(i).attr("href"), suiteName);
+					p.get(i).attr("href"), suiteName, suiteNameForReport);
 			System.out.println(htmlContent);
 		}
 		return htmlContent;
