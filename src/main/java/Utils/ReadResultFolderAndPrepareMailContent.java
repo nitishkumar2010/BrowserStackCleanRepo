@@ -61,7 +61,8 @@ public class ReadResultFolderAndPrepareMailContent {
 			Document document = Jsoup.parse(content_suite);
 			Element suite = document.select("h1").first();
 
-			String suiteName = suite.text();
+			String suites = suite.text();
+			String suiteName = suites.replaceAll("-\\d+$", "");
 			System.out.println(suiteName);
 			htmlContent += ReadResultXMLAndExtractResultData.readFileAndPerformInsertion(buildNum,
 					p.get(i).attr("href"), suiteName);
