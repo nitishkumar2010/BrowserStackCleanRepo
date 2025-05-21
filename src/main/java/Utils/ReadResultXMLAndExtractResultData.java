@@ -32,7 +32,7 @@ public class ReadResultXMLAndExtractResultData {
 	 */
 	public static String readFileAndPerformInsertion(String buildNum, String htmlFileName, String suiteName2) {
 		String filePath = System.getProperty("user.dir") + File.separator + "test-output" + File.separator
-				+ "jenkins-BRPExecution-" + buildNum.trim() + File.separator + "xml" + File.separator;
+				+ "jenkins-BrowserStack-" + buildNum.trim() + File.separator + "xml" + File.separator;
 
 		String remoteAddress = "";
 		try {
@@ -46,7 +46,7 @@ public class ReadResultXMLAndExtractResultData {
 			ex.printStackTrace();
 		}
 
-		String path = "http://" + remoteAddress + ":8084/test-output/" + "jenkins-BRPExecution-"
+		String path = "http://" + remoteAddress + ":8084/test-output/" + "jenkins-BrowserStack-"
 				+ buildNum.trim() + "/html/" + htmlFileName;
 		
 		String htmlText = "";

@@ -64,7 +64,7 @@ public class SendReportEx2 {
 
 		String str = null;
 		File file = new File(System.getProperty("user.home") + File.separator + folder + File.separator + "jobs"
-				+ File.separator + "BRPExecution" + File.separator + "nextBuildNumber");
+				+ File.separator + "BrowserStack" + File.separator + "nextBuildNumber");
 		FileInputStream fis;
 		try {
 			fis = new FileInputStream(file);
@@ -92,7 +92,7 @@ public class SendReportEx2 {
 			ex.printStackTrace();
 		}
 
-		String path = "http://" + remoteAddress + ":8084/test-output/" + "jenkins-BRPExecution-" + str.trim()
+		String path = "http://" + remoteAddress + ":8084/test-output/" + "jenkins-BrowserStack-" + str.trim()
 		+ "/html/";
 		htmlContent += "<h2><b><a href='" + path + "'>" + "Full Report" + "</a></td></table></b></h2>";
 
@@ -131,7 +131,7 @@ public class SendReportEx2 {
 	 */
 	private static String getDataFromOverviewHTMLFile(String buildId) {
 		String path = System.getProperty("user.dir") + File.separator + "test-output" + File.separator
-				+ "jenkins-BRPExecution-" + buildId.trim() + File.separator + "html" + File.separator;
+				+ "jenkins-BrowserStack-" + buildId.trim() + File.separator + "html" + File.separator;
 		System.out.println(path);
 		StringBuilder contentBuilder = new StringBuilder();
 		try {
