@@ -2,9 +2,13 @@ userName: nitish66
 accessKey: j5ZGTwMYzHmqkJPqgMZn
 platforms:
   - os: Windows
-    osVersion: 10
+    osVersion: 11
     browserName: Chrome
     browserVersion: latest
+  - os: OS X
+    osVersion: Monterey
+    browserName: Safari
+    browserVersion: 15.6
 browserstackLocal: false
 buildName: browserstack-build-1
 projectName: BrowserStack Sample
