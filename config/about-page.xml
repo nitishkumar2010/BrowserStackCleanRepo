@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel Automation Run" thread-count="2" parallel="tests">
-	<listeners>
+	<!--<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-	</listeners>
+	</listeners>-->
 	<test name="About Page">
 		<classes>
 			<class name="BRP.TestAboutPage" />
