@@ -254,27 +254,18 @@
 
 
 	<build>
-		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-		<testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.6.1</version> <!-- Use a stable, recent version -->
 				<executions>
 					<execution>
-						<id>build-classpath</id>
-						<phase>generate-sources</phase>
+						<id>getClasspathFilenames</id>
 						<goals>
-							<goal>build-classpath</goal>
+							<goal>properties</goal>
 						</goals>
-						<configuration>
-							<outputFile>${project.build.directory}/classpath.txt</outputFile>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
